@@ -7,17 +7,19 @@ const { Dog, conn } = require('../../src/db.js');
 const agent = session(app);
 const dog = {
   name: 'Pug',
+  weight:'25',
+  height: '25'
 };
 
-describe('Videogame routes', () => {
+describe('dog routes', () => {
   before(() => conn.authenticate()
   .catch((err) => {
-    console.error('Unable to connect to the database:', err);
+    console.error('no se pudo conectar con DB', err);
   }));
   beforeEach(() => Dog.sync({ force: true })
     .then(() => Dog.create(dog)));
   describe('GET /dogs', () => {
-    it('should get 200', () =>
+    it('espera status 200', () =>
       agent.get('/dogs').expect(200)
     );
   });

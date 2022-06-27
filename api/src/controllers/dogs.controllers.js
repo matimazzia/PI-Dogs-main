@@ -25,7 +25,7 @@ const getDogs = async function(req, res){
                 throw new Error("el perro no fue encontrado")
             }    
         }
-        res.json(response)
+        res.status(200).json(response)
         //junto los dos
         
     } catch(e){
