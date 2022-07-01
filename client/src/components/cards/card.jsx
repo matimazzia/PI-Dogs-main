@@ -25,5 +25,5 @@ const Card = ({ id,name, weight, image, temperament }) => {
     </Link>
   );
 };
-
+//hola
 export default Card;
