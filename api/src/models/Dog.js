@@ -18,13 +18,26 @@ module.exports = (sequelize) => {
       type: DataTypes.INTEGER,
       allowNull:false,
     },
-    weight:{
+    weightMin:{
+      type: DataTypes.INTEGER,
+      allowNull:false,
+    },
+    weightMax:{
       type: DataTypes.INTEGER,
       allowNull:false,
     },
     life_span:{
       type: DataTypes.INTEGER,
       allowNull: true
+    },
+    image:{
+      type: DataTypes.STRING,
+      allowNull:false
+    },
+    createdInDb:{
+      type: DataTypes.BOOLEAN,
+      allowNull:false,
+      defaultValue: true
     },
   },{
     timestamps:false

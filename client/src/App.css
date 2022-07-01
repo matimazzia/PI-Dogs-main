@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -35,4 +36,24 @@
   to {
     transform: rotate(360deg);
   }
+}
+body {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    to right, 
+    rgb(232, 233, 232) 0%, 
+    rgb(224, 210, 170) 100%
+  );
+}
+body a{
+  text-decoration: none;
+}
+body::-webkit-scrollbar{
+  display: none;
 }

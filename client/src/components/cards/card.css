@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand:300,400,700);
+
+.card {
+    margin: 0 20px 0px 20px;
+    cursor: pointer;
+    background-color: rgb(255, 240, 207);
+    width: 300px;
+    height: 320px;
+    border-radius: 20px;
+    filter: drop-shadow(15px 8px 8px rgb(150, 152, 153));
+    transition: all ease 200ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card:hover {
+    transform: scale(1.01);
+    transition: all ease 200ms;
+}
+
+.imgcard {
+    width: 250px;
+    height: auto;
+    min-height: 120px;
+    max-height: 140px;
+    margin: 10px 0 0 0;
+    padding: 0%;
+    border-radius: 15px;
+    filter: drop-shadow(6px 6px 3px rgba(0,0,0,0.2));
+    transition: all ease 200ms;
+}
+
+.textblock {
+    width: 250px;
+    height: 80px;
+    color:dimgray;
+    font-family: quicksand;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    word-wrap: normal;
+    margin:0,
+}
+
+.titulo {
+    font-size: 20px;
+    padding:0%;
+    margin: 0px 0 10px 0;
+}
+
+.otros {
+    font-size: 15px;
+    padding:0%;
+    margin: 0 0 10px 0;
+}
+

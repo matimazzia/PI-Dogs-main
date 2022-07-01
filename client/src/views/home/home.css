@@ -1,0 +1,10 @@
+.contenedor {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 50px;
+    margin: 100px 0px 100px 0px;
+}

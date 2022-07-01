@@ -7,11 +7,14 @@ const getDogs = async function(req, res){
         // traidos de la api
        const {data} = await axios.get('https://api.thedogapi.com/v1/breeds');
         var dogsFilter=[];
-        data.forEach(e => dogsFilter.push({id:e.id,name:e.name,temperament:e.temperament,weight:e.weight}))
+        data.forEach(e => dogsFilter.push({id:e.id,name:e.name,temperament:e.temperament,weightMin:e.weight.metric.replace(" ","").split("-")[0],weightMax:e.weight.metric.replace(" ","").split("-")[1], image: e.image }))
         // traidos de la db 
         const dogsDb= await Dog.findAll({
-            attributes: ['id','name', 'weight'],
-            include: Temperament,
+            attributes: ['id','name', 'weightMin','weightMax','image','createdInDb'],
+            include: [{
+                 model : Temperament,       
+                attributes: ['id','name'],
+            }]
 
         })
         if(dogsDb){
@@ -56,14 +59,17 @@ if(dogDb){
 }
 };
 const postDogs =async (req,res)=>{
-    const {name,height,weight,life_span,pkt}= req.body;
-    if(!(name&&weight&&height)){ throw new Error('Faltan agregar valores');}
+    const {name,height,life_span,pkt,image,weightMin,
+        weightMax}= req.body;
+    if(!(name&&weightMin&&weightMax&&height)){ throw new Error('Faltan agregar valores');}
 try{
     const newDog = await Dog.create({
         name,
         height,
-        weight,
-        life_span
+        weightMin,
+        weightMax,
+        life_span,
+        image,
     })
     if(pkt.length>=1){
         pkt.map(async (e) => {
