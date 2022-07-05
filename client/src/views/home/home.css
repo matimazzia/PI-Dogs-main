@@ -39,6 +39,7 @@
     color: rgb(94, 94, 94);
     border-radius: 8px;
     transition: all 0.25s ease;
+    filter: drop-shadow(30px 10px 10px rgb(116, 116, 116));
 }
   .content-select select:hover{
     background: #808080;

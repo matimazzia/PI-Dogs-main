@@ -2,7 +2,7 @@ import React from "react";
 import "./card.css";
 import { Link } from "react-router-dom";
 
-const Card = ({ id,name, weight, image, temperament }) => {
+const Card = ({ id,name, image, temperament }) => {
 
   return (
     <Link to={`/dogs/${id}`}> 
@@ -10,7 +10,6 @@ const Card = ({ id,name, weight, image, temperament }) => {
         <img src={image}alt="HOLA" className="imgcard"></img>
         <div className="textblock">
         <h2 className="titulo">{name}</h2>
-        <h4 className="otros">{weight?`${weight} KG`: "No especificado"}</h4>
         <h4 className="otros">{function (temperament) {
                 if (typeof (temperament) === 'string') {
                     return temperament;

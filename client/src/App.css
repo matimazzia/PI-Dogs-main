@@ -26,7 +26,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #dcdedf;
 }
 
 @keyframes App-logo-spin {
@@ -45,8 +45,8 @@ body {
   margin: 0;
   background: linear-gradient(
     to right, 
-    rgb(232, 233, 232) 0%, 
-    rgb(224, 210, 170) 100%
+    rgb(180, 180, 180) 0%, 
+    rgb(144, 144, 144) 100%
   );
 }
 body a{
@@ -54,4 +54,14 @@ body a{
 }
 body::-webkit-scrollbar{
   display: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 6000000000s 0s, color 6000000000s 0s;
+}
+::-webkit-input-placeholder { 
+  color: transparent;
+}
+:hover::-webkit-input-placeholder {
+  color: rgb(255, 255, 255);
 }

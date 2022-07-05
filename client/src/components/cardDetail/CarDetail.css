@@ -3,17 +3,25 @@
 .detail {
     height: 100%;
     display: flex;
-    flex-direction: row;
+    background-color: rgb(63, 63, 63);
+    padding: 4%;
+    border-radius: 65px;
+    flex-direction: column-reverse;
     justify-content: center;
     grid-row-gap: 50px;
+    grid-row-gap: 50px;
     row-gap: 50px;
-    margin: 260px 0px;
+    margin: 40px 289px;
     align-items: center;
     flex-wrap: wrap;
     align-content: stretch;
+    filter: drop-shadow(30px 10px 10px rgb(116, 116, 116));
 }
 .textblock2 {
-    color: dimgray;
+    color: rgb(255, 255, 255);
+    background-color: rgb(94, 94, 94);
+    border-radius: 15px;
+    padding: 2%;
     font-family: quicksand;
     font-weight: 400;
     display: flex;
@@ -21,9 +29,10 @@
     align-content: flex-start;
     flex-wrap: nowrap;
     flex-direction: column;
-    align-items: baseline;
+    align-items: stretch;
     margin: 5;
     FONT-WEIGHT: 100;
+    filter: drop-shadow(6px 6px 3px rgba(0,0,0,0.2));
 }
 .otros2 {
     font-size: 25px;
@@ -37,9 +46,9 @@
 }
 .imgcd {
     height: auto;
-    margin: 0 40px 0 20px;
+    margin: 0 22px 0 22px;
     border-radius: 15px;
     filter: drop-shadow(6px 6px 3px rgba(0,0,0,0.2));
     transition: all ease 200ms;
-    max-width: 500px;
+    max-width: 513px;
 }

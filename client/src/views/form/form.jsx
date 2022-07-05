@@ -156,50 +156,40 @@ export default function Form() {
             <Link to='/home'><button className='buttonHome'>INICIO</button></Link>
             <h1 className='title'> Crea tu perro 🐶</h1>
             <form onSubmit={e => handleSubmit(e)}>
-                <div>
-                    <label><strong>Nombre: </strong></label>
-                    <input type='text' value={input.name} name='name' onChange={e => handleChange(e)} />
+                <div className="disv">
+                    <input type='text' value={input.name} name='name' onChange={e => handleChange(e)} placeholder="Nombre:"  className="int"/>
                     {errors.name && (
                         <p className='error'><strong>{errors.name}</strong></p>
                     )}
                 </div>
-                <div>
-                    <label><strong>Alto: </strong></label>
-                    <input type='text' value={input.height} name='height' onChange={e => handleChange(e)} />
-                    <label><strong> cm</strong></label>
+                <div className="disv">
+                    <input type='text' value={input.height} name='height' onChange={e => handleChange(e)} placeholder="Alto:" className="int"/>
                     {errors.height && (
                         <p className='error'><strong>{errors.height}</strong></p>
                     )}
                 </div>
-                <div>
-                    <label><strong>Peso Minimo: </strong></label>
-                    <input type='text' value={input.weightMin} name='weightMin' onChange={e => handleChange(e)} />
-                    <label><strong> kg</strong></label>
+                <div className="disv">
+                    <input type='text' value={input.weightMin} name='weightMin' onChange={e => handleChange(e)} placeholder="Peso Minimo:"className="int"/>
                     {errors.weightMin && (
                         <p className='error'><strong>{errors.weightMin}</strong></p>
                     )}
                 </div>
-                <div>
-                    <label><strong>Peso Maximo </strong></label>
-                    <input type='text' value={input.weightMax} name='weightMax' onChange={e => handleChange(e)} />
-                    <label><strong> kg</strong></label>
+                <div className="disv">
+                    <input type='text' value={input.weightMax} name='weightMax' onChange={e => handleChange(e)} placeholder="Peso Maximo:" className="int"/>
                     {errors.weightMax && (
                         <p className='error'><strong>{errors.weightMax}</strong></p>
                     )}
                 </div>
-                <div>
-                    <label><strong>Expectativa de vida </strong></label>
-                    <input type='text' value={input.life_span} name='life_span' onChange={e => handleChange(e)} />
-                    <label><strong> Años</strong></label>
+                <div className="disv">
+                    <input type='text' value={input.life_span} name='life_span' onChange={e => handleChange(e)} placeholder="Expectativa de vida:" className="int"/>
                     {errors.life_span && (
                         <p className='error'><strong>{errors.life_span}</strong></p>
                     )}
                 </div>
-                <div>
-                    <label><strong>Imagen url: </strong></label>
-                    <input type='text' value={input.image} name='image' onChange={e => handleChange(e)} />
+                <div className="disv">
+                    <input type='text' value={input.image} name='image' onChange={e => handleChange(e)} placeholder="Url de imagen:" className="int"/>
                 </div>
-                <div>
+                <div className="content-select2">
                     <select onChange={e =>{
                         handleSelect(e)
                         e.target.options[0].selected=true;

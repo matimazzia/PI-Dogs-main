@@ -1,0 +1,110 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand:300,400,700);
+
+.divCreate {
+    color: white;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-family: quicksand;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.int {
+    color: rgb(65, 65, 65);
+    margin: 20px;
+    border-style: none;
+    place-content: center;
+    border: none;
+    width: 400px;
+    height: 35px;
+    text-align: center;
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    filter: drop-shadow(30px 10px 10px rgb(116, 116, 116));
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+.int::placeholder{
+    color:rgb(104, 104, 104);
+    background-color: transparent;
+}
+.int::placeholder:hover{
+    color:rgb(255, 255, 255);
+    background-color: transparent;
+}
+.int:hover{
+    background: #808080;
+    color: rgb(255, 255, 255);
+    transform: scale(1.05);
+    transition: all 0.25s ease;
+  }
+
+.content-select2 select {
+    font-family: quicksand;
+    cursor: text;
+    list-style: none;
+    margin: 10px;
+    padding: 0px 40px;
+    height: 42px;
+    font-size: 1em;
+    border: none;
+    color: rgb(94, 94, 94);
+    border-radius: 8px;
+    transition: all 0.25s ease;
+    filter: drop-shadow(30px 10px 10px rgb(116, 116, 116));
+}
+.content-select2 select:hover{
+    background: #808080;
+    color: rgb(255, 255, 255);
+    transform: scale(1.05);
+    transition: all 0.25s ease;
+  }
+.content-select2 select option:hover{
+    background-color: #808080;
+}
+.buttonHome{
+    font-family:quicksand ;
+    font-size: 20px;
+    cursor: pointer;
+    height: 50px;
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(255, 255, 255);
+    border: none;
+    border-radius: 15px;
+    filter: drop-shadow(30px 10px 10px rgb(116, 116, 116));
+    transition: all 0.25s ease;
+}
+.buttonHome:hover{
+        transform: scale(1.05);
+        transition: all 0.25s ease;
+        background: #808080;
+        color: rgb(255, 255, 255);
+}
+.boop{
+    font-family:quicksand ;
+    font-size: 20px;
+    cursor: pointer;
+    height: 50px;
+    width: 150px;
+
+    align-items: center;
+    background-color:rgb(255, 255, 255);
+    border: none;
+    border-radius: 15px;
+    filter: drop-shadow(30px 10px 10px rgb(116, 116, 116));
+    transition: all 0.25s ease;
+}
+.boop:hover{
+    transform: scale(1.05);
+    transition: all 0.25s ease;
+    background: #808080;
+    color: rgb(255, 255, 255);
+}

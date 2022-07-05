@@ -7,5 +7,45 @@
     align-items: center;
 }
 .contenedornv{
-    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin: 40px;
+    width: 50%;
+
+}
+.navis3{
+    cursor: pointer;
+    height: 50px;
+    width: 75px;
+    background-color:rgb(112, 107, 101);
+    border: none;
+    border-radius: 15px;
+    filter: drop-shadow(30px 10px 10px rgb(116, 116, 116));
+}
+.navis3 svg{
+    width: 60%;
+    fill: white;
+}
+.navis4{
+    cursor: pointer;
+    height: 50px;
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(112, 107, 101);
+    border: none;
+    border-radius: 15px;
+    filter: drop-shadow(30px 10px 10px rgb(116, 116, 116));
+}
+.navis4 svg{
+    width: 30px;
+    fill: white;
+}
+.perro{
+    margin-left: 5px;
+    margin-bottom: 3.5px;
 }

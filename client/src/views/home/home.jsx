@@ -73,21 +73,21 @@ const Home = () => {
         <ul className='lista'>
           <li className='content-select'>
             <select onChange={e => handleSortByName(e)}  >
-              <option value='selected' hidden className='elementNB' >Sort breeds by name</option>
+              <option value='selected' hidden className='elementNB' >Organizar por nombre</option>
               <option value='asc'  >A - Z</option>
               <option value='desc' >Z - A</option>
             </select>
           </li>
           <li className='content-select' >
             <select onChange={e => handleSortByWeight(e)}  >
-              <option value='selected' hidden>Sort by weight</option>
-              <option value='asc'>Lighter to heavier</option>
-              <option value='desc'>Heavier to lighter</option>
+              <option value='selected' hidden>Organizar por peso</option>
+              <option value='asc'>Liviano a pesado</option>
+              <option value='desc'>Pesado a liviano</option>
             </select>
           </li>
           <li className='content-select' >
             <select onChange={e => handleFilterTemperaments(e)}  >
-              <option key={0} value='all'>All temperaments</option>
+              <option key={0} value='all'>Todos los temperamentos</option>
               {allTemperaments?.sort(function (a, b) {
                 if (a.name < b.name) return -1;
                 if (a.name > b.name) return 1;
@@ -101,9 +101,9 @@ const Home = () => {
           </li>
           <li className='content-select' >
             <select onChange={e => handleFilterOrigin(e)}  >
-              <option value='all'>All breeds</option>
-              <option value='api'>Existent breeds</option>
-              <option value='created'>Created breeds</option>
+              <option value='all'>Todas las RAZAS</option>
+              <option value='api'>Razas existentes</option>
+              <option value='created'>Razas creadas</option>
             </select>
           </li>
         </ul>
