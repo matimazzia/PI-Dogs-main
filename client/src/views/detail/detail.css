@@ -1,0 +1,11 @@
+.contenedorcd {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.contenedornv{
+    margin-bottom: 50px;
+}

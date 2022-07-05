@@ -23,7 +23,7 @@ const getDogs = async function(req, res){
         var response=dogsFilter;
         }
         if(name){
-        response =response.filter(e=> e.name===name)
+        response =response.filter(e=> e.name.toLowerCase().includes(name.toLowerCase()))
         if(!response.length>=1){
                 throw new Error("el perro no fue encontrado")
             }    

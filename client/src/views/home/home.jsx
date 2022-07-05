@@ -4,7 +4,8 @@ import Card from "../../components/cards/card";
 import { getDogs, getTemperaments, filterDogsByTemperament, filterDogsByOrigin, sortByWeight, sortByName } from "../../redux/actions";
 import { useSelector, useDispatch } from "react-redux";
 import Paginado from "../../components/paginado/paginado";
-
+import Nav from "../../components/Nav/Nav";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -66,8 +67,10 @@ const Home = () => {
 
   return (
     <div className="contenedor">
-      <div className='divNB'>
-        <ul className='navbar'>
+      <Nav/>
+    <div className="contenedorli">
+      <div className='divli'>
+        <ul className='lista'>
           <li className='content-select'>
             <select onChange={e => handleSortByName(e)}  >
               <option value='selected' hidden className='elementNB' >Sort breeds by name</option>
@@ -118,6 +121,7 @@ const Home = () => {
         )
       })}
       <Paginado dogsPerPage={dogsPerPage} allDogs={allDogs.length} paginado={paginado} />
+    </div>
     </div>
 
   );

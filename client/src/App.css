@@ -43,8 +43,6 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  width: 100vw;
-  height: 100vh;
   background: linear-gradient(
     to right, 
     rgb(232, 233, 232) 0%, 

@@ -9,10 +9,14 @@ export const GET_DETAIL = 'GET_DETAIL';
 export const SEARCH_FAIL = 'SEARCH_FAIL';
 
 
-export function getDogs() {
+export function getDogs(name) {
     return async function (dispatch) {
         try {
-            let json = await axios.get('http://localhost:3001/dogs');
+            if(name){
+                var json = await axios.get(`http://localhost:3001/dogs?name=${name}`)
+            }else{
+                var json = await axios.get('http://localhost:3001/dogs');
+            }
             return dispatch({
                 type: GET_DOGS,
                 payload: json.data,
@@ -70,11 +74,11 @@ export function postDog(payload) {
     }
 }
 
-// Async Await:
+
 export function getDetail(id) {
     return async function (dispatch) {
         try {
-            var json = await axios.get('http://localhost:3001/dogs/' + id);
+            var json = await axios.get(`http://localhost:3001/dogs/${id}`);
             return dispatch({
                 type: GET_DETAIL,
                 payload: json.data
