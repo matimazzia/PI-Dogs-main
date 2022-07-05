@@ -94,7 +94,7 @@
     cursor: pointer;
     height: 50px;
     width: 150px;
-
+    margin: 10px;
     align-items: center;
     background-color:rgb(255, 255, 255);
     border: none;
