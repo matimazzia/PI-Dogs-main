@@ -205,20 +205,20 @@ export default function Form() {
                             )
                         })}
                     </select>
-
+                    <div className="boxcontenttemp">
                     {input.temperaments.map(el => {
                         return (
                             
-                                <ul className='allTemps' key={el.id}>
-                                    <li>
-                                        <p className='temp'><strong>{el.name}</strong></p>
-                                        <button onClick={() => handleDeleteTemperament(el.name)} className='x'>X</button>
-                                    </li>
-                                </ul>
+                                <div className='cube' key={el.id}>
+                                    <div className="cubecontent">
+                                        <p className="pselect"><strong>{el.name}</strong></p>
+                                        <button className="bselect" onClick={() => handleDeleteTemperament(el.name)}>X</button>
+                                    </div>
+                                </div>
                             
                         )
                     })}
-
+                    </div>
                 </div>
                 <button type='submit' className='boop' ><strong>CREAR</strong></button>
 

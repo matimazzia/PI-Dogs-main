@@ -9,7 +9,7 @@ export default function Paginado({dogsPerPage, allDogs, paginado}) {
     }
 
     return (
-        <nav>
+        <nav className='pagin'>
             <ul className='paginado'>
                 {pageNumbers.length > 1 && 
                 pageNumbers.map(number => (

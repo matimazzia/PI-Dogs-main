@@ -13,7 +13,7 @@
 .paginado li button {
     float: left;
     padding: 8px 18px;
-    border-radius: 8px;
+    border-radius: 30px;
     background-color: #ffffff;
     border: transparent;
     margin: 3px;
@@ -36,4 +36,10 @@
 .paginado li button:focus{
     background-color: #364361;
     color:#eeeeee ;
+}
+.pagin{
+    width: 100vw;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }

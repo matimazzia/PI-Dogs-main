@@ -83,8 +83,11 @@ try{
 }
 }
 
+
 module.exports = {
-    getDogs: getDogs,
-    getDogsRaza:getDogsRaza,
-    postDogs:postDogs
+    getDogs,
+    getDogsRaza,
+    postDogs,
+
+    
 }

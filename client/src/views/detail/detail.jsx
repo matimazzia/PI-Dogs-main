@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./detail.css"
+import LoadingSpinner from "../../components/loading/LoadingSpinner";
 
 function Detail(){
     const {id} = useParams()
@@ -38,15 +39,15 @@ function Detail(){
         </button>
         </Link>
         </div>
-        {dog.name? 
+        {dog.name ? 
         <CardDetail
             name={dog.name}
-            weight={dog.weight.metric? dog.weight.metric :`${dog.weightMin !== NaN && dog.weightMin? dog.weightMin : ""} - ${dog.weightMax !== NaN && dog.weightMax? dog.weightMax : "" }`}
+            weight={dog.weight?.metric? dog.weight.metric :`${dog.weightMin !== NaN && dog.weightMin? dog.weightMin : ""} - ${dog.weightMax !== NaN && dog.weightMax? dog.weightMax : "" }`}
             image={dog.image? dog.image: (dog.reference_image_id ? `https://cdn2.thedogapi.com/images/${dog.reference_image_id}.jpg` : '' )}
             temperament={dog.temperament ? dog.temperament : dog.temperaments}
-            height={(dog.height.metric? dog.height.metric : dog.height)}
+            height={dog.height?.metric ? dog.height.metric : dog.height}
             life_span={dog.life_span.toString().includes('years')? dog.life_span.replace('years', "años"): (`${dog.life_span} años`) }
-            />:<></>}
+            /> : <LoadingSpinner/>}
         </div>
 
     )

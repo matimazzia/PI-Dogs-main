@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Paginado from "../../components/paginado/paginado";
 import Nav from "../../components/Nav/Nav";
 import { Link } from "react-router-dom";
+import LoadingSpinner from "../../components/loading/LoadingSpinner";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -108,7 +109,7 @@ const Home = () => {
           </li>
         </ul>
       </div>
-      {currentDogs.map((dog) => {
+      {allDogs.length<1 ? <LoadingSpinner/> : currentDogs.map((dog) => {
         return (
           <Card
             image={dog.image.url ? dog.image.url : dog.image}
