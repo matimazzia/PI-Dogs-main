@@ -7,6 +7,7 @@ export const SORT_BY_NAME = 'SORT_BY_NAME';
 export const SORT_BY_WEIGHT = 'SORT_BY_WEIGHT';
 export const GET_DETAIL = 'GET_DETAIL';
 export const SEARCH_FAIL = 'SEARCH_FAIL';
+export const CLEAN_DETAIL = 'CLEAN_DETAIL';
 
 
 export function getDogs(name) {
@@ -82,6 +83,19 @@ export function getDetail(id) {
             return dispatch({
                 type: GET_DETAIL,
                 payload: json.data
+            })
+        } catch (err) {
+            console.log(err)
+        }
+    }
+}
+
+export function cleanDetail() {
+    return async function (dispatch) {
+        try {
+            return dispatch({
+                type: CLEAN_DETAIL,
+                payload: ""
             })
         } catch (err) {
             console.log(err)

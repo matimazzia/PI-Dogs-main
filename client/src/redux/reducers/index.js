@@ -6,6 +6,7 @@ import {
   SORT_BY_NAME,
   SORT_BY_WEIGHT,
   GET_DETAIL,
+  CLEAN_DETAIL,
 } from "../actions/index";
 
 const initialState = {
@@ -97,6 +98,12 @@ export const RootReducer=(state = initialState, action)=> {
               ...state,
               detail: action.payload,
           }
+        
+        case CLEAN_DETAIL:
+            return{
+                ...state,
+                detail:action.payload,
+            }
 
       default:
           return state;

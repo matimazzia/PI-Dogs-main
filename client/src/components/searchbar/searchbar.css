@@ -35,3 +35,6 @@
     width: 80%;
     fill: white;
 }
+.searchbar input::placeholder{
+    color: black;
+}

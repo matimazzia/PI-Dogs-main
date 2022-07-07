@@ -1,6 +1,6 @@
 import React from "react";
 import CardDetail from "../../components/cardDetail/CarDetail";
-import { getDetail } from "../../redux/actions";
+import { cleanDetail, getDetail } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -15,6 +15,9 @@ function Detail(){
     const Dog = useSelector((state) => state.detail);
     useEffect(() => {
     dispatch(getDetail(id));
+    return function clean(){
+        dispatch(cleanDetail())
+    }
   }, [dispatch,id]);
 
     var dog= Dog
