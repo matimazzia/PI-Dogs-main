@@ -29,11 +29,15 @@ export function getDogs(name) {
 }
 
 export function getTemperaments() {
-    return async function (dispatch) {
-        let json = await axios.get('http://localhost:3001/temperaments', {});
-        return dispatch({
-            type: GET_TEMPERAMENTS,
-            payload: json.data,
+    return function (dispatch) {
+        axios.get('http://localhost:3001/temperaments', {}).then((json)=>{
+            return dispatch({
+                type: GET_TEMPERAMENTS,
+                payload: json.data
+            }
+            )
+            
+            
         })
     }
 }

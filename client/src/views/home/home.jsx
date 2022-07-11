@@ -121,7 +121,7 @@ const Home = () => {
           />
         )
       })}
-      <Paginado dogsPerPage={dogsPerPage} allDogs={allDogs.length} paginado={paginado} />
+      <Paginado currentPage={currentPage} dogsPerPage={dogsPerPage} allDogs={allDogs.length} paginado={paginado} />
     </div>
     </div>
 

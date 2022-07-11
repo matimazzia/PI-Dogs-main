@@ -30,8 +30,20 @@ async function temperDb() {
     }
 
 }
+async function deleteTemperament(req,res){
+  try{
+    const {id} = req.params
+    Temperament.destroy({
+        where : {id : id}
+      })
+      res.send("Temperamento eliminado con exito")
+  }catch(e){
+        res.send(e.message)
+  }
+}
 
 module.exports = {
     getTemperament:getTemperament,
     temperDb,
+    deleteTemperament,
 }
